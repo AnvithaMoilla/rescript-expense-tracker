@@ -1,0 +1,138 @@
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.app-container h1 {
+  margin-block-end:0px;
+}
+
+.input-details {
+  display: flex;
+  flex-direction: column;
+  background-color: #1A1A1A; 
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px #B0B0B0; 
+  margin-top: 32px;
+  width: 346px;
+}
+
+.input-details input {
+  width: 100%;
+  height: 30px;
+  border-color: #B0B0B0; 
+  border-radius: 8px;
+  background-color: #1A1A1A; 
+  color: #FFFFFF; 
+}
+
+.income-expense {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1A1A1A; 
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px #B0B0B0; 
+  width: 100%;
+}
+
+.income-expense-cell {
+  width: 48%;
+  padding: 10px;
+  background-color: #1A1A1A; 
+}
+
+.income-expense-cell p {
+  font-size: 19px;
+  margin: 0;
+}
+
+#income {
+  color: lightgray;
+  font-weight: bold;
+  padding: 5px;
+  border-right: 1px solid #B0B0B0;
+  height: 100%;
+}
+
+#expense {
+  color: rgb(114, 114, 114);
+  font-weight: bold;
+  padding: 5px;
+}
+
+.history {
+  margin-top: 32px;
+  width: 100%;
+}
+
+.history h4 {
+  margin-bottom: 16px;
+  color: #FF6A13; 
+}
+
+.history-elements {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 12px;
+  border-radius: 5px;
+}
+
+.history-elements.expense {
+  background-color: rgb(114, 114, 114); 
+}
+
+.history-elements.income {
+  background-color: #B0B0B0;
+}
+
+.history-elements p {
+  margin: 0;
+}
+
+.balance {
+  align-self: flex-start;
+  padding-left: 32px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.balance p {
+  margin-block-start :0px
+}
+
+button,
+#transaction-btn {
+  cursor: pointer;
+}
+
+button:hover,
+#transaction-btn:hover {
+  background-color: #FF6A13;
+}
+
+#transaction-btn {
+  width: 100%;
+  height: 35px;
+  background-color: #FF6A13; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#transaction-btn:hover {
+  background-color: #FFFFFF;
+  color: #FF6A13; 
+}
+
+h4 {
+  text-align: center;
+}
+
