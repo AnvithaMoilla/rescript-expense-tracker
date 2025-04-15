@@ -4,32 +4,27 @@ let make = () => {
 
     let (transaction, setTransaction) = React.useState(() => [])
 
-     React.useEffect(() => {
-    let savedTransactions = JsBindings.getItem("transactions");
+    React.useEffect0(() => {
+    let savedTransaction = JsBindings.getItem("transactions")
 
-    let savedTransactionsTemp = switch Js.Nullable.toOption(savedTransactions) {
-        | Some(value) => value
-        | None => ""
-    };
+    switch Js.Nullable.toOption(savedTransaction) {
+    | Some(jsonStr) =>
+      let parsed = JsBindings.parseIntoMyData(jsonStr)
+      setTransaction(parsed)
+    |   None => ()
+    }
 
     None
-    }, []);
+    });
 
     React.useEffect1(() => {
-  if (transaction->Js.Array.length > 0) {
-
-    let jsonArray: Js.Json.t =
-      transaction
-      ->Belt.Array.map(element =>
-
-        Js.Json.object_(Js.Dict.empty())
-      )
-      ->Js.Json.array;
-    
-    JsBindings.setItem("transactions", JsBindings.stringify(jsonArray));
-  }
-  None;
-}, [transaction]);
+        if (Array.length(transaction) > 0) 
+        {
+            let stringify = JsBindings.stringify(transaction)
+            JsBindings.setItem("transactions", stringify);
+        }
+        None
+    }, [transaction]);
 
     let addDetails = (event) => {
         ReactEvent.Form.preventDefault(event)

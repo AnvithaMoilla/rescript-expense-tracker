@@ -3,4 +3,4 @@
 
 
 @val @scope("JSON") external parseIntoMyData: string => 'a = "parse"
-@val @scope("JSON") external stringify: Js.Json.t => string = "stringify"
+@val @scope("JSON") external stringify: array<'a> => string = "stringify"
